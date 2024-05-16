@@ -4,11 +4,11 @@ var path = require('path');
 var logger = require('morgan');
 var mongoose = require('mongoose')
 
-var mongoDB = 'mongodb://localhost:37017/contratos';
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+var mongoDB = "mongodb://127.0.0.1/contratos";
+mongoose.connect(mongoDB);
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Erro de conexão ao MongoDB'));
-db.once('open', () => {
+db.on("error", console.error.bind(console, "Erro de conexão ao MongoDB"));
+db.once("open", () => {
   console.log("Conexão ao MongoDB realizada com sucesso");
 });
 

@@ -1,0 +1,31 @@
+extends layout
+
+block content  
+    .w3-card-4.w3-margin
+        .w3-container.w3-teal
+            h1 Detalhes do Contrato #{contrato.idcontrato}
+            
+        .w3-container.w3-margin
+            ul.w3-ul
+                li 
+                    b ID do Contrato:  
+                    | #{contrato.idcontrato}
+                li 
+                    b Objecto do Contrato:  
+                    | #{contrato.objectoContrato}
+                li
+                    b Data de Celebração:  
+                    | #{contrato.dataCelebracaoContrato}
+                li
+                    b Preço Contratual:  
+                    | #{contrato.precoContratual}
+                li
+                    b NIPC da Entidade Comunicante:  
+                    | #{contrato.NIPC_entidade_comunicante}
+                li
+                    b Entidade Comunicante:  
+                    | #{contrato.entidade_comunicante}
+
+            footer.w3-container.w3-teal
+                address
+                    a(href="/contratos?_sort=idcontrato") Voltar
